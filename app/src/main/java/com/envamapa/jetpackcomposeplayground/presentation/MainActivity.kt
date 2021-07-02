@@ -3,13 +3,16 @@ package com.envamapa.jetpackcomposeplayground.presentation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.envamapa.jetpackcomposeplayground.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +30,10 @@ fun NewsStory() {
     Column(
         modifier = Modifier.padding(16.dp)
     ) {
+        Image(
+            painter = painterResource(id = R.drawable.header),
+            contentDescription = "Nice header"
+        )
         Text(text = "A day in Shark Fin Cove")
         Text(text = "Davenport, California")
         Text(text = "December 2018")
